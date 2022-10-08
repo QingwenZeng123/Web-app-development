@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+/*=========== BASE && COMMON CODE ===========*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Slab", "san-serif";
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+body {
+  height: 100vh;
+}
+
+#main {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 20vh auto 20vh;
+  grid-row-gap: 20px;
+}
+
+header,
+.step,
+footer,
+#calculate {
+  border: 5px dotted;
+}
+
+.step,
+#calculate {
+  /* Code credit to CSS Generator: https://cssgradient.io */
+  background: rgb(188, 184, 138);
+  background: linear-gradient(
+    90deg,
+    rgba(188, 184, 138, 1) 51%,
+    rgba(255, 200, 0, 0.513509627483806) 100%
+  );
+}
+
+/*=========== HEADER ===========*/
+header {
+  /* Code credit to CSS Generator: https://cssgradient.io */
+  background: rgb(128, 101, 23);
+  background: linear-gradient(
+    90deg,
+    rgba(128, 101, 23, 1) 0%,
+    rgba(170, 108, 57, 0.27354691876750703) 100%
+  );
+  text-shadow: #fc0 6px 0 5px;
+}
+
+/*=========== FORM ===========*/
+.form__container {
+  display: grid;
+  grid-template-areas:
+    ". . . step1"
+    ". . step2 ."
+    ". step3 . ."
+    "step4 . . ."
+    "submit submit submit submit";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr) 0.5fr;
+  height: 65vh;
+  width: 100%;
+}
+
+#step__1 {
+  grid-area: step1;
+}
+
+#step__2 {
+  grid-area: step2;
+}
+
+#step__3 {
+  grid-area: step3;
+}
+
+#step__4 {
+  grid-area: step4;
+}
+
+input,
+select {
+  border: 1px dotted;
+}
+
+.form__submit {
+  grid-area: submit;
+}
+
+#calculate {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+#calculate:hover {
+  transform: rotate(360deg);
+}
+
+/*=========== RESULT ===========*/
+.result {
+  width: 100%;
+}
+
+.result__container {
+  border: 2px dashed;
+}
+
+.squirrel {
+  width: 30%;
+  height: 30%;
+}
+
+canvas {
+  margin: 20px 40px;
+}
+
+/*=========== FOOTER ===========*/
+footer {
+  background: rgba(128, 101, 23, 0.7);
+  display: flex;
+  justify-content: center;
+}
+
+.footer__container {
+  row-gap: 10px;
+  margin: 10px 0;
+  width: 30%;
+}
+
+.social__media {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#copy__rights {
+  font-style: italic;
+}
+
+/* =========== RESPONSIVENESS ===========
+/* For small devices */
+@media screen and (min-width: 310px) {
+  form,
+  .step {
+    padding: 5px;
+  }
+
+  .step,
+  #calculate {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  input,
+  select {
+    width: 100%;
+  }
+
+  .footer__container {
+    font-size: 8px;
+    row-gap: 5px;
+    height: 15vh;
+  }
+
+  .result__container {
+    padding: 10px 0;
+  }
+
+  .result__message {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .social__media {
+    width: 50%;
+  }
+
+  .social__media-icon {
+    font-size: 15px;
+  }
+
+  #copy__rights {
+    font-size: 5px;
+  }
+}
+
+/* For medium devices*/
+@media screen and (min-width: 568px) {
+  .step,
+  #calculate,
+  .result__message {
+    font-size: 15px;
+  }
+
+  .result__container {
+    padding: 15px 10px;
+  }
+
+  .footer__container {
+    font-size: 12px;
+    row-gap: 8px;
+  }
+
+  .social__media-icon {
+    font-size: 20px;
+  }
+
+  #copy__rights {
+    font-size: 8px;
+  }
+}
+
+@media screen and (min-width: 730px) {
+  .social__media-icon {
+    font-size: 25px;
+  }
+
+  #copy__rights {
+    font-size: 10px;
+  }
+}
+
+/* For larger device */
+@media screen and (min-width: 1000px) {
+  header,
+  .result__message {
+    font-size: 20px;
+  }
+
+  input,
+  select {
+    width: 80%;
+  }
+
+  form {
+    row-gap: 20px;
+  }
+
+  .result__container {
+    padding: 20px 40px;
+  }
+
+  .social__media {
+    justify-content: center;
+  }
+
+  .social__media-content {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  header,
+  .result__message {
+    font-size: 30px;
+  }
+
+  .form__container {
+    margin: 0 40px;
+  }
+
+  .step,
+  #calculate,
+  input,
+  select {
+    font-size: 20px;
+  }
+
+  input,
+  select {
+    width: 60%;
+  }
+
+  .footer__container {
+    font-size: 15px;
+  }
+}

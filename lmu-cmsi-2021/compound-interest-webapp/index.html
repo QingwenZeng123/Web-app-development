@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Compound Interest Calculator</title>
+    <link rel="stylesheet" href="calculator.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+  </head>
+  <body>
+    <section id="main">
+      <!--============= HEADER =============-->
+      <header class="flex">
+        <h1>Old Fashioned Compound Interest Calculator</h1>
+      </header>
+      <section>
+        <form class="flex">
+          <!--============= FORM =============-->
+          <div class="form__container">
+            <!--============= STEP 1 - ROW 1 =============-->
+            <div class="step flex" id="step__1">
+              <label for="compound">Compound Interval</label>
+              <select id="compound" required>
+                <option value="1">Annually</option>
+                <option value="2">Semiannually</option>
+                <option value="4">Quarterly</option>
+                <option value="12">Monthly</option>
+              </select>
+            </div>
+            <!--============= STEP 2 - ROW 2 =============-->
+            <div class="step flex" id="step__2">
+              <label for="rates">Estimate Interest Rate (%)</label>
+              <input type="number" id="rates" required />
+            </div>
+            <!--============= STEP 3 - ROW 3=============-->
+            <div class="step flex" id="step__3">
+              <label for="years">Time Span</label>
+              <input type="number" id="years" required />
+            </div>
+            <!--============= STEP 4 - ROW 4 =============-->
+            <div class="step flex" id="step__4">
+              <label for="principal">Principal</label>
+              <input type="number" id="principal" required />
+            </div>
+            <!--============= CALCULATE BUTTON - ROW 5 =============-->
+            <div class="form__submit flex">
+              <button id="calculate">
+                Calculate <i class="uil uil-arrow-right button__icon"></i>
+              </button>
+            </div>
+          </div>
+          <!--============= DISPLAY RESULT =============-->
+          <div class="result hidden">
+            <div class="result__container flex">
+              <h1 class="result__message"></h1>
+              <canvas id="result__graph"></canvas>
+              <img class="squirrel" src="squirrel.jpeg" alt="squirrel" />
+            </div>
+          </div>
+        </form>
+      </section>
+      <!--============= FOOTER =============-->
+      <footer>
+        <div class="footer__container flex">
+          <div class="social__media">
+            <a
+              href="https://www.instagram.com/lmuseaver/"
+              class="social__media-content"
+            >
+              <i class="uil uil-instagram social__media-icon"></i>
+            </a>
+            <a href="https://lmucs.slack.com/" class="social__media-content">
+              <i class="uil uil-slack social__media-icon"></i>
+            </a>
+          </div>
+          <a
+            href="https://codesandbox.io/s/affectionate-dawn-c1c58e?file=/index.html"
+            class="source__code"
+          >
+            CodeSandbox
+          </a>
+          <p class="footer__name">MAIKA TRAN & QINGWEN ZENG</p>
+          <p id="copy__rights">@Copy rights. All rights reserved.</p>
+        </div>
+      </footer>
+    </section>
+    <script src="calculator.js"></script>
+  </body>
+</html>

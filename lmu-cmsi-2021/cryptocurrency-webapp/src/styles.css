@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Montserrat&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+}
+
+
+/* ======== APPP COMPONENT ========*/
+.App {
+  background-image: url("background.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  row-gap: 20px;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+}
+
+/* ======== ENTRY COMPONENT ========*/
+.input {
+  font-size: 20px;
+  padding: 10px;
+}
+
+/* ======== INFO COMPONENT ========*/
+.coin__container {
+  flex-direction: column;
+  row-gap: 20px;
+  max-width: 1500px;
+  width: 100%;
+}
+
+.coin__row {
+  column-gap: 20px;
+  background-color: rgba(250, 250, 250, 0.3);
+}
+
+.coin__info,
+.coin__data {
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.coin__info,
+.coin__data,
+.coin {
+  width: 50%;
+  align-items: center;
+}
+
+.coin {
+  column-gap: 15px;
+}
+
+.coin__name {
+  font-size: 16px;
+}
+
+.coin__image {
+  height: 50px;
+  width: 50px;
+}
+
+.coin__symbol {
+  width: 25%;
+  text-align: left;
+}
+
+.coin__price {
+  width: 25%;
+  text-align: right;
+}
+
+.coin__volume {
+  width: 40%;
+  text-align: left;
+}
+
+.coin__percent {
+  width: 10%;
+}
+
+.coin__marketcap {
+  flex-direction: column;
+  row-gap: 5px;
+  width: 59%;
+  text-align: right;
+}
+
+.coin__marketcap span {
+  text-align: center;
+}
+
+.red {
+  color: #ff0000;
+}
+
+.green {
+  color: #14ff00;
+}
+
+/* ================= RESPONSIVENESS ================= */
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .input {
+    height: 39px;
+    font-size: 15px;
+  }
+
+  .coin__container,
+  .coin__row,
+  .coin__info,
+  .coin__data {
+    flex-direction: column;
+    row-gap: 15px;
+    align-items: center;
+  }
+
+  .coin__row {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .coin__info,
+  .coin__data {
+    width: 100%;
+    padding: 0;
+  }
+
+  .coin {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .coin__symbol,
+  .coin__price,
+  .coin__volume,
+  .coin__percent,
+  .coin__marketcap {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 570px) {
+}
